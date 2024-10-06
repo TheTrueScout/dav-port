@@ -1,0 +1,198 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+
+  --Greenish-Blue: #1E8782;
+  --White-Smoke: #F5F5F5;
+
+
+  --Aluminium: #A5ABBD;
+  --Gun-Powder: #414756;
+
+  --Default-Black: #000000;
+  --Default-White: #FFFFFF;
+
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--White-Smoke);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--Greenish-Blue);
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.813rem;
+}
+
+.p--bold {
+  font-weight: 700;
+}
+
+ul li {
+  font-size: 1.125rem;
+  line-height: 1.813rem;
+}
+
+.button--text {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+/* utility */
+.col-gun-powder {
+  color: var(--Gun-Powder);
+}
+
+.col-greenish-blue {
+  color: var(--Greenish-Blue);
+}
+
+
+  /* main */
+.container {
+  padding: 4rem;
+}
+
+  /* header */
+header {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  justify-content: end;
+  margin-right: 7.5rem;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--Default-Black);
+  font-size: 1.125rem;
+  position: relative;
+}
+
+header a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0.188rem;
+  border-radius: 100rem;
+  bottom: -0.3rem;
+  left: 0;
+  background-color: var(--Greenish-Blue);
+  transition: 0.4s;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+  /* front page */
+.container__front-page {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16rem;
+}
+
+.container__front-page__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 50%;
+}
+
+.container__front-page__right {
+  max-width: 50%;
+}
+
+#driving, #results, #closing, #deals, #elevating, #success {
+  transition: 0.4s;
+  cursor: default;
+}
+
+#driving:hover, #closing:hover, #elevating:hover {
+  color: var(--Greenish-Blue);
+}
+
+#driving:hover + #results, #closing:hover + #deals, #elevating:hover + #success {
+  color: var(--Default-Black);
+}
+
+  /* about me */
+.container__about-me {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  gap: 2rem;
+  margin-bottom: 16rem;
+}
+
+.container__about-me__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* my skills */
+.container__my-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 55%;
+  margin-left: auto;
+  margin-bottom: 16rem;
+}
+
+.container__my-skills__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 76%;
+}
+
+.container__my-skills li{
+  list-style-type: none;
+  position: relative;
+}
+
+.container__my-skills li::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 0.3rem;
+  width: 0.3rem;
+  background-color: var(--Greenish-Blue);
+  border-radius: 100rem;
+}
+
+
+
