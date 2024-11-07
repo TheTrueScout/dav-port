@@ -37,13 +37,14 @@ function sendEmail() {
 
 
     Email.send({
-      SecureToken : "385365aa-c8a4-4e26-b842-e738c32e564f",
+      SecureToken : "3a7ffa58-9699-4111-8ee1-35cef672b9ed",
       To : 'reeko3d@gmail.com',
       From : "reeko3d@gmail.com",
       Subject : subject.value,
       Body : bodyMessage
   }).then(
     message => {
+      console.log('Email send result:', message)
       if (message == 'OK') {
         Swal.fire({
           title: "Success!",
