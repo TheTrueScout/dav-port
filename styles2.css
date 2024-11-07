@@ -28,6 +28,8 @@ img, picture, video, canvas, svg {
   --Default-Black: #000000;
   --Default-White: #FFFFFF;
 
+  --Red-error: #B92121;
+
 }
 
 body {
@@ -36,7 +38,7 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 
 h2 {
@@ -76,16 +78,26 @@ ul li {
 
   /* main */
 .container {
-  padding: 4rem;
+  padding: 2rem;
 }
 
   /* header */
 header {
   display: flex;
-  gap: 3rem;
-  margin-bottom: 4rem;
   justify-content: end;
-  margin-right: 7.5rem;
+
+  .nav-button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+
+  /*
+  gap: 3rem;
+  margin-bottom: 1rem;
+  margin-right: 7.5rem; 
+  */
 }
 
 header a {
@@ -114,22 +126,19 @@ header a:hover::after {
   /* front page */
 .container__front-page {
   display: flex;
-  max-width: 100%;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16rem;
+  margin-bottom: 3rem;
+  gap: 1.5rem;
 }
 
 .container__front-page__left {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 50%;
 }
 
-.container__front-page__right {
-  max-width: 50%;
-}
 
 #driving, #results, #closing, #deals, #elevating, #success {
   transition: 0.4s;
@@ -148,9 +157,8 @@ header a:hover::after {
 .container__about-me {
   display: flex;
   flex-direction: column;
-  max-width: 60%;
   gap: 2rem;
-  margin-bottom: 16rem;
+  margin-bottom: 3rem;
 }
 
 .container__about-me__text {
@@ -164,9 +172,8 @@ header a:hover::after {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 55%;
   margin-left: auto;
-  margin-bottom: 16rem;
+  margin-bottom: 3rem;
 }
 
 .container__my-skills__header {
@@ -197,22 +204,98 @@ header a:hover::after {
   /* contact me */
 .container__contact-me {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 60%;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 .input-box {
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.8rem;
+}
 
-  .input-field {
-    display: flex;
-    flex-direction: column;
-    max-width: 40%;
-  }
+.input-and-icon {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  background-color: var(--Default-White);
+  border-radius: 0.5rem;
+  border: 1px solid var(--Default-Black);
+
+}
+
+.field .item, .field .item2 {
+  font-family: Arial, sans-serif;
+  font-size: 1.125rem;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.input-and-icon.error {
+  border-color: var(--Red-error);
+}
+
+.input-and-icon.success {
+  border-color: var(--Greenish-Blue);
+}
+
+.field .item::placeholder, .field .item2::placeholder {
+  color: #A5ABBD;
+}
+
+.field .item:focus, .field .item2:focus {
+  outline: none;
+}
+
+.input-box button {
+  width: 80%;
+  align-self: center;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 1.125rem;
+  border-radius: 100rem;
+  border: none;
+  background-color: var(--Greenish-Blue);
+  color: var(--Default-White);
+  box-shadow: 0 0 1rem #26b0a9;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.input-box button:hover {
+  box-shadow: none;
+}
+
+.textarea-field .item {
+  resize: none;
+}
+
+.field .error-text {
+  font-size: 0.9rem;
+  color: var(--Red-error);
+  text-align: left;
+  margin-top: 0.5rem;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.field.error .error-text {
+  opacity: 1;
+}
+
+
+
+.form-input-icons {
+  stroke: #A5ABBD;
+  transition: 0.4s;
+}
+
+.form-input-icons.error {
+  stroke: var(--Red-error);
+}
+
+.form-input-icons.success {
+  stroke: var(--Greenish-Blue);
 }
