@@ -44,7 +44,7 @@ function sendEmail() {
       Body : bodyMessage
   }).then(
     message => {
-      console.log('Email send result:', message)
+      console.log('Email send result:', message);
       if (message == 'OK') {
         Swal.fire({
           title: "Success!",
@@ -130,7 +130,7 @@ function checkInputs() {
 }
 
 function checkEmail() {
-  const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+  const emailRegex = /^([a-zA-Z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
   const errorTextEmail = document.querySelector('.error-text.email')
 
   if (!emailAddress.value.match(emailRegex)) {

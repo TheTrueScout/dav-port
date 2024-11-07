@@ -222,6 +222,7 @@ header a:hover::after {
   background-color: var(--Default-White);
   border-radius: 0.5rem;
   border: 1px solid var(--Default-Black);
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(45, 45, 45, 0.327);
 
 }
 
